@@ -142,3 +142,20 @@ function preencheDiaDeHoje() {
   if (data != null)
     data.value = (new Date()).toISOString().substring(0, 10);
 }
+
+function determinaLocalizacao(sender) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(geolocationSuccessCallback, geolocationErrorCallback)
+  } else {
+    alert("Recurso não disponível neste dispositivo.")
+  }
+  return false;
+}
+
+function geolocationSuccessCallback(position) {
+  document.querySelector("#localizacao").value = position.coords.latitude;
+}
+
+function geolocationErrorCallback(error) {
+  alert("Serviço de localização não disponível no momento");
+}
