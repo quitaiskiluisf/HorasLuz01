@@ -90,14 +90,29 @@ function horasLuz(latitude, data) {
   return 2 * acosg(w) / 15;
 }
 
+// Converte uma string, no formato YYYY-MM-DD para um objeto data
+// Retorna null em caso de erro
+function strToDate(valor) {
+  var x = valor.split("-");
+
+  var data = null;
+  if (x.length == 3) {
+    try {
+      data = new Date(x[0], x[1] - 1, x[2]);
+    } catch (e) {}
+  }
+
+  return data;
+}
+
 function calculaHorasLuz() {
   var latitude = document.querySelector("#localizacao").value;
   var data = document.querySelector("#data").value;
-
-  // TODO: parse da data já existente
-  data = new Date();
-
-  alert(horasLuz(latitude, data));
+  data = strToDate(data);
+  var horas_luz = horasLuz(latitude, data);
+  horas = Math.floor(horas_luz);
+  minutos = Math.floor((horas_luz - horas) * 60);
+  document.querySelector("#resultado").innerHTML = "Duração do dia = " + horas + " horas " + minutos + " minutos.";
 }
 
 // Se existir, carrega o valor da última latitude informada
