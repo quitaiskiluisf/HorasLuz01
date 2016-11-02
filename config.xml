@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.lfernandoqapps.horasluzsimples" version="0.1.1">
+  <name>HorasLuz Simples</name>
+  <description>Aplicativo do trabalho da disciplina de Desenvolvimento para Dispositivos Móveis.</description>
+  <author href="https://build.phonegap.com" email="support@phonegap.com">Luís Fernando Quitaiski</author>
+</widget>
