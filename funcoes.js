@@ -1,7 +1,12 @@
 // Ligação dos eventos
 document.querySelector("#localizacao").addEventListener("keyup", persisteLatitude, false);
-window.onload = carregaLatitude;
+window.onload = windowOnLoadFunctions;
 
+// Funções executadas quando a página for carregada
+function windowOnLoadFunctions() {
+  carregaLatitude();
+  preencheDiaDeHoje();
+}
 
 // Verifica se o ano informado como parâmetro é bissexto ou não
 function anoBissexto(ano) {
@@ -128,4 +133,12 @@ function carregaLatitude() {
 // ela possa ser recuperada quando o aplicativo for aberto novamente
 function persisteLatitude() {
   localStorage.setItem("HorasLuz_Latitude", this.value);
+}
+
+// Se o campo "data" estiver em branco, preenche-o com a data de hoje
+function preencheDiaDeHoje() {
+  var data = document.querySelector("#data");
+
+  if (data != null)
+    data.value = (new Date()).toISOString().substring(0, 10);
 }
