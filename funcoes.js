@@ -79,8 +79,6 @@ function acosg(valor) {
 function horasLuz(latitude, data) {
   var w = -tang(latitude) * tang(23.45 * sing(360 * (284 + diaDoAno(data)) / 365));
 
-  console.log("O valor de w é: ", w)
-
   // Garante que a variável não ultrapasse os limites
   if (w > 1)
     w = 1;
@@ -105,7 +103,6 @@ function calculaHorasLuz() {
 // Se existir, carrega o valor da última latitude informada
 // no campo destinado à ela
 function carregaLatitude() {
-  console.log("Disparou o carregamento");
   var valor = localStorage.getItem("HorasLuz_Latitude");
 
   if (valor != null)
@@ -115,6 +112,5 @@ function carregaLatitude() {
 // Ao alterar a latitude, armazena-a no localstorage para que
 // ela possa ser recuperada quando o aplicativo for aberto novamente
 function persisteLatitude() {
-  console.log("Disparou a persistência");
   localStorage.setItem("HorasLuz_Latitude", this.value);
 }
