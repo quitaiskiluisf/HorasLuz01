@@ -3,30 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <title>Horas de luz em um dia</title>
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="stylesheet" href="dist/css/ratchet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="dist/js/ratchet.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Horas de luz</h1>
-    <p>Determine a quantidade de horas de luz que irá existir em qualquer local em qualquer dia do ano.</p>
+  <header class="bar bar-nav">
+    <h1 class="title">Horas de luz</h1>
   </header>
   <div class="content">
-    <form>
-      <div>
+    <form class="form input-group">
+      <p><strong>Determine a quantidade de horas de luz que irá existir em qualquer local em qualquer dia do ano.</strong></p>
+      <div class="input-row">
         <label for="localizacao">Localização: </label>
         <input type="text" name="localizacao" placeholder="Ex: -27.23121312" id="localizacao" />
       </div>
-      <div>
+      <div class="input-row">
         <label for="data">Data: </label>
         <input type="date" name="data" id="data" />
       </div>
-      <div>
-        <p id="resultado"></p>
-      </div>
+      <p id="resultado" class="h3"></p>
     </form>
   </div>
-  <div class="botoes">
-    <button onclick="calculaHorasLuz()" type="button">Calcular</button>
+  <div class="bar bar-standard bar-footer">
+    <button class="btn btn-primary btn-block" onclick="calculaHorasLuz()" type="button">Calcular</button>
   </div>
 </body>
 <script src="funcoes.js"></script>

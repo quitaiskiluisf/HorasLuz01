@@ -1,35 +1,8 @@
-body {
-  background: #E7E7E7;
-  font-size: 1em;
-  margin: 10px;
-  font-family: Verdana;
+form p {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-h1 {
-  font-size: 1.3em;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-input {
-  width: 150px;
-}
-
-form label {
-  display: block;
-  width: 200px;
-  float: left;
-}
-
-button {
-  margin-top: 50px;
-}
-
-.dica {
-  font-size: 0.8em;
-  font-style: italic;
-}
-
-.botoes {
-  text-align: center;
+#resultado {
+  margin-top: 1em;
 }

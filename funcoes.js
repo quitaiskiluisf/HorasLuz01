@@ -117,7 +117,7 @@ function calculaHorasLuz() {
   var horas_luz = horasLuz(latitude, data);
   var horas = Math.floor(horas_luz);
   var minutos = Math.floor((horas_luz - horas) * 60);
-  document.querySelector("#resultado").innerHTML = "Duração do dia = " + horas + " horas " + minutos + " minutos.";
+  document.querySelector("#resultado").innerHTML = "Duração do dia = " + horas + "h " + minutos + "min";
 }
 
 // Se existir, carrega o valor da última latitude informada
